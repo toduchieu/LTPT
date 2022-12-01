@@ -23,7 +23,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 		em = HibernateUtil.getInstance().getEntityManager();
 	}
 
-	@Override
+
 	public boolean addNhanVien(NhanVien nhanVien) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		
@@ -41,7 +41,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 		return false;
 	}
 
-	@Override
+
 	public List<NhanVien> getDSNhanVien() throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -59,7 +59,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 		return null;
 	}
 
-	@Override
+
 	public int soNhanVien() throws RemoteException {
 		int i=0;
 		EntityTransaction tr = em.getTransaction();
@@ -78,7 +78,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 		return i;
 	}
 
-	@Override
+
 	public boolean updateNhanVien(NhanVien nhanVien) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		
@@ -94,7 +94,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 		return false;
 	}
 
-	@Override
+
 	public NhanVien getNhanVienTheoSoNV(String maNV) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		
@@ -112,7 +112,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 		return null;
 	}
 
-	@Override
+
 	public List<NhanVien> getTim(String text) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {	
@@ -131,7 +131,7 @@ public class ImplNhanVien extends UnicastRemoteObject implements NhanVienDao {
 
 	
 
-	@Override
+
 	public NhanVien getNVTheoSDT(String sdt) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {

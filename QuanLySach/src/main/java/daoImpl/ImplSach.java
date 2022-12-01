@@ -23,7 +23,7 @@ public class ImplSach  extends UnicastRemoteObject implements SachDao {
 	public ImplSach() throws RemoteException {
 		em = HibernateUtil.getInstance().getEntityManager();
 	}
-	@Override
+
 	public boolean addSach(Sach Sach) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -41,7 +41,7 @@ public class ImplSach  extends UnicastRemoteObject implements SachDao {
 	}
 	
 	
-	@Override
+
 	public List<Sach> getSachTheoMaLoai(ObjectId maLoai) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -66,7 +66,7 @@ public class ImplSach  extends UnicastRemoteObject implements SachDao {
 		
 		return null;
 	}
-	@Override
+
 	public Sach getSachTheoTenVaMaLoai(String tenSach, ObjectId maLoai) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -90,7 +90,7 @@ public class ImplSach  extends UnicastRemoteObject implements SachDao {
 		}
 		return null;
 	}
-	@Override
+
 	public List<Sach> getAllSach() throws RemoteException {
 		// TODO Auto-generated method stub
 		EntityTransaction tr=em.getTransaction();
@@ -106,7 +106,7 @@ public class ImplSach  extends UnicastRemoteObject implements SachDao {
 		}
 		return null;
 	}
-	@Override
+
 	public boolean updateSach(Sach Sach) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -122,7 +122,7 @@ public class ImplSach  extends UnicastRemoteObject implements SachDao {
 		}
 		return false;
 	}
-	@Override
+
 	public List<Sach> timkiemSach(String key) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {

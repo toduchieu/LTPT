@@ -122,15 +122,15 @@ public class FrmQuanLySach extends JPanel implements ActionListener, MouseListen
 	
 		setLayout(null);
 		
-		String ip ="";
-		try {
-			ip = InetAddress.getLocalHost().getHostAddress();
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		}
+//		String ip ="";
+//		try {
+//			ip = InetAddress.getLocalHost().getHostAddress();
+//		} catch (UnknownHostException e1) {
+//			e1.printStackTrace();
+//		}
 		
-		loaiSachDao =  (LoaiSachDao) Naming.lookup("rmi://"+ip+":9999/loaiSachDao");
-		sachDao =  (SachDao) Naming.lookup("rmi://"+ip+":9999/sachDao");
+		loaiSachDao =  (LoaiSachDao) Naming.lookup("rmi://localhost:9999/loaiSachDao");
+		sachDao =  (SachDao) Naming.lookup("rmi://localhost:9999/sachDao");
 
 		p = new JPanel();
 		p.setBackground(Color.WHITE);
@@ -291,20 +291,23 @@ public class FrmQuanLySach extends JPanel implements ActionListener, MouseListen
 
 		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
 		rightRenderer.setHorizontalAlignment(JLabel.RIGHT);
+		
+		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+		centerRenderer.setHorizontalAlignment(JLabel.CENTER);
 
-		tbl.getColumnModel().getColumn(2).setCellRenderer(rightRenderer);
-		tbl.getColumnModel().getColumn(3).setCellRenderer(rightRenderer);
-		tbl.getColumnModel().getColumn(4).setCellRenderer(rightRenderer);
-		tbl.getColumnModel().getColumn(5).setCellRenderer(rightRenderer);
+		tbl.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
+		tbl.getColumnModel().getColumn(3).setCellRenderer(centerRenderer);
+		tbl.getColumnModel().getColumn(4).setCellRenderer(centerRenderer);
 		
 		tbl.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-		tbl.getColumnModel().getColumn(0).setPreferredWidth(150);
-		tbl.getColumnModel().getColumn(1).setPreferredWidth(120);
+		tbl.getColumnModel().getColumn(0).setPreferredWidth(200);
+		tbl.getColumnModel().getColumn(1).setPreferredWidth(160);
 		tbl.getColumnModel().getColumn(2).setPreferredWidth(100);
-		tbl.getColumnModel().getColumn(4).setPreferredWidth(90);
-		tbl.getColumnModel().getColumn(5).setPreferredWidth(90);
-		tbl.getColumnModel().getColumn(6).setPreferredWidth(200);
+		tbl.getColumnModel().getColumn(3).setPreferredWidth(70);
+		tbl.getColumnModel().getColumn(4).setPreferredWidth(60);
 		tbl.getColumnModel().getColumn(5).setPreferredWidth(200);
+		tbl.getColumnModel().getColumn(6).setPreferredWidth(200);
+		
 		
 		JScrollPane spMatHang = new JScrollPane(tbl);
 		spMatHang.setViewportBorder(null);

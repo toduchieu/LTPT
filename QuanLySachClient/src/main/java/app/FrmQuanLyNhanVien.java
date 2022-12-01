@@ -97,14 +97,14 @@ public class FrmQuanLyNhanVien extends JPanel implements ActionListener, MouseLi
 	@SuppressWarnings("deprecation")
 	private void initialize(JFrame fMain) throws MalformedURLException, RemoteException, NotBoundException {
 
-		String ip = "";
-		try {
-			ip = InetAddress.getLocalHost().getHostAddress();
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		}
+//		String ip = "";
+//		try {
+//			ip = InetAddress.getLocalHost().getHostAddress();
+//		} catch (UnknownHostException e1) {
+//			e1.printStackTrace();
+//		}
 
-		nhanVienDao = (NhanVienDao) Naming.lookup("rmi://" + ip + ":9999/nhanVienDao");
+		nhanVienDao = (NhanVienDao) Naming.lookup("rmi://localhost:9999/nhanVienDao");
 
 		frame = new JFrame();
 		frame.setBounds(0, 0, 1043, 736);

@@ -21,7 +21,7 @@ public  class ImplLoaiSach extends UnicastRemoteObject implements LoaiSachDao {
 	public ImplLoaiSach() throws RemoteException {
 		em = HibernateUtil.getInstance().getEntityManager();
 	}
-	@Override
+
 	public boolean addLoaiSach(LoaiSach loaiSach) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -38,7 +38,7 @@ public  class ImplLoaiSach extends UnicastRemoteObject implements LoaiSachDao {
 		return false;
 	}
 	
-	@Override
+
 	public List<LoaiSach> getAllLoaiSach() throws RemoteException {
 
 		EntityTransaction tr = em.getTransaction();
@@ -57,7 +57,7 @@ public  class ImplLoaiSach extends UnicastRemoteObject implements LoaiSachDao {
 		
 		return null;
 	}
-	@Override
+
 	public LoaiSach getLoaiSachTheoTen(String tenLoai) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {

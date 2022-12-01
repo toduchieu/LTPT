@@ -21,7 +21,7 @@ public class ImplTaiKhoan extends UnicastRemoteObject implements TaiKhoanDao {
 		em = HibernateUtil.getInstance().getEntityManager();
 	}
 
-	@Override
+
 	public boolean addTaiKhoan(TaiKhoan taiKhoan) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -38,7 +38,6 @@ public class ImplTaiKhoan extends UnicastRemoteObject implements TaiKhoanDao {
 		return false;
 	}
 
-	@Override
 	public boolean updateTaiKhoan(TaiKhoan taiKhoan) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {
@@ -55,7 +54,6 @@ public class ImplTaiKhoan extends UnicastRemoteObject implements TaiKhoanDao {
 		return false;
 	}
 
-	@Override
 	public TaiKhoan timtaikhoangtheoten(String ten) throws RemoteException {
 		EntityTransaction tr = em.getTransaction();
 		try {

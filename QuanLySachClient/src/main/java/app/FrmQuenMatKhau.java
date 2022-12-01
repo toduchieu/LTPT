@@ -63,15 +63,15 @@ public class FrmQuenMatKhau extends JFrame implements ActionListener {
 //		frmHThngQun.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 
-		String ip ="";
-		try {
-			ip = InetAddress.getLocalHost().getHostAddress();
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		}
+//		String ip ="";
+//		try {
+//			ip = InetAddress.getLocalHost().getHostAddress();
+//		} catch (UnknownHostException e1) {
+//			e1.printStackTrace();
+//		}
 		
-		nhanVienDao =  (NhanVienDao) Naming.lookup("rmi://"+ip+":9999/nhanVienDao");
-		tkDao =  (TaiKhoanDao) Naming.lookup("rmi://"+ip+":9999/taiKhoanDao");
+		nhanVienDao =  (NhanVienDao) Naming.lookup("rmi://localhost:9999/nhanVienDao");
+		tkDao =  (TaiKhoanDao) Naming.lookup("rmi://localhost:9999/taiKhoanDao");
 
 
 		JPanel panel = new JPanel();

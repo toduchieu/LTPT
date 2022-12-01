@@ -1,4 +1,4 @@
- package app;
+package app;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -8,9 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.net.InetAddress;
 import java.net.MalformedURLException;
-import java.net.UnknownHostException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -58,7 +56,7 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+					UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
 					FrmDangNhap window = new FrmDangNhap();
 					window.setVisible(true);
 				} catch (Exception e) {
@@ -110,7 +108,7 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 		JLabel lblhethong = new JLabel("Hệ thống quản lý sách T3");
 		lblhethong.setIcon(new ImageIcon("C:\\Users\\Tai\\eclipse-workspace\\HeThongQuanLyThuoc\\img\\tieude2.png"));
 		lblhethong.setFont(new Font("Dialog", Font.BOLD, 25));
-		lblhethong.setBounds(30, 11, 325, 116);
+		lblhethong.setBounds(50, -30, 325, 116);
 		panel_1.add(lblhethong);
 		
 		JLabel txtquenmk = new JLabel("Quên mật khẩu?");
@@ -205,7 +203,7 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 		
 		JLabel lblbg = new JLabel("");
 		lblbg.setIcon(new ImageIcon("data\\img\\bg3.jpg"));
-		lblbg.setBounds(0, 0, 384, 361);
+		lblbg.setBounds(0, 30, 384, 361);
 		panel_1.add(lblbg);
 
 	}

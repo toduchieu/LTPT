@@ -175,9 +175,9 @@ public class FrmMain extends JFrame implements ActionListener  {
 		btnquanlynhanvien.addActionListener(this);
 	
 		IconFontSwing.register(FontAwesome.getIconFont());
-		Icon icSL = IconFontSwing.buildIcon(FontAwesome.MEDKIT, 50, new Color(91, 155, 213));
-		Icon icQLBH = IconFontSwing.buildIcon(FontAwesome.CART_PLUS, 50, new Color(0, 176, 80));
-		Icon icNV = IconFontSwing.buildIcon(FontAwesome.USER_MD, 50, Color.orange);
+		Icon icSL = IconFontSwing.buildIcon(FontAwesome.BOOK, 50, new Color(91, 155, 213));
+		Icon icQLBH = IconFontSwing.buildIcon(FontAwesome.USERS, 50, new Color(0, 176, 80));
+		Icon icNV = IconFontSwing.buildIcon(FontAwesome.CALCULATOR, 50, Color.orange);
 		
 		Icon icDX = IconFontSwing.buildIcon(FontAwesome.SIGN_OUT, 30, Color.red);
 		
@@ -211,4 +211,3 @@ public class FrmMain extends JFrame implements ActionListener  {
 	
 	}
 }
-
