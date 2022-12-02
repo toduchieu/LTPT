@@ -38,7 +38,6 @@ public  class ImplLoaiSach extends UnicastRemoteObject implements LoaiSachDao {
 		return false;
 	}
 	
-
 	public List<LoaiSach> getAllLoaiSach() throws RemoteException {
 
 		EntityTransaction tr = em.getTransaction();
